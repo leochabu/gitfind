@@ -8,7 +8,7 @@ import background from "../../assets/images/background.png"
 
 function App() {
   console.log(process.env.REACT_APP_API_KEY)
-  const headers = { 'Authorization': 'Bearer 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' };
+  const headers = { 'Authorization': 'Bearer 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' };
   const [user, setUser] = useState('');
   const [currentUser, setCurrentUser] = useState(null);
   const [repos, setRepos] = useState(null)
@@ -48,7 +48,7 @@ function App() {
       lastSearchedUsers.push(user);
       localStorage.setItem('lastSearches',lastSearchedUsers);
       const lastSearchesArray = lastSearches;
-      setLastSearches(lastSearchesArray);
+      setLastSearches(lastSearches);
     }
   }
 
@@ -65,7 +65,7 @@ function App() {
         
         <div className="search-bar">
             <input name="username" placeholder="@username" value={user}  onChange={event => setUser(event.target.value)}/>
-            <button onClick={handleGetData}>Buscar</button>
+            <button onClick={handleGetData}>Search</button>
         </div>
 
         <div className="content">
@@ -77,8 +77,7 @@ function App() {
             <div className="column">          
               {currentUser?.login ? (
               <>
-                <div className="profile-container">
-                  
+                <div className="profile-container">  
                   <img src={currentUser.avatar_url} alt="" className="profile" />
                   <div className="profile-info">
                     <h3>
